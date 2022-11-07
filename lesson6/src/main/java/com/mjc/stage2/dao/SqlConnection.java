@@ -1,28 +1,24 @@
 package com.mjc.stage2.dao;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.Objects;
 
+@SpringBootApplication
 public class SqlConnection {
-    private static DataSource dataSource;
 
-    private SqlConnection(){
-        dataSource = getDataSource();
+    public static void main(String[] args) {
+        SpringApplication.run(
+                SqlConnection.class,
+                "--spring.h2.console.enabled=true"
+        );
     }
 
-    public static Connection getConnection() throws SQLException {
-        if (Objects.isNull(dataSource)) {
-            dataSource = getDataSource();
-        }
-
-        return dataSource.getConnection();
-    }
-
+    @Bean
     private static DataSource getDataSource() {
         return new EmbeddedDatabaseBuilder()
                 .setType(EmbeddedDatabaseType.H2)
@@ -34,4 +30,5 @@ public class SqlConnection {
                 .addScript("./MARK.sql")
                 .build();
     }
+
 }

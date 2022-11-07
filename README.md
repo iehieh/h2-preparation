@@ -2,7 +2,7 @@ This project helps to test your SQL statement for the task
 [Task #1. SQL](https://github.com/mjc-school/stage2-module3-SQL-tasks).
 
 To take the H2 database available and populated with initial data, run the `main` method
-of one of `InitH2` classes.
+from one of `InitH2` classes.
 
 ## Using Maven
 
@@ -24,7 +24,7 @@ the application is running.
 
 ![h2-console image](./images/h2-console.png)
 
-To connect to our database we go to the `localhost:8081/h2-console` and connect to URL 
+To connect to a database we go to the `localhost:8081/h2-console` and connect to URL 
 `jdbc:h2:mem:testdb` as user `sa` with an empty password.
 
 ![example with select all students](./images/select-example.png)

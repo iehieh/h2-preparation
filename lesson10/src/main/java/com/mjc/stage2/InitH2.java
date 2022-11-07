@@ -1,4 +1,4 @@
-package com.mjc.stage2.dao;
+package com.mjc.stage2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,11 +9,11 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import javax.sql.DataSource;
 
 @SpringBootApplication
-public class SqlConnection {
+public class InitH2 {
 
     public static void main(String[] args) {
         SpringApplication.run(
-                SqlConnection.class,
+                InitH2.class,
                 "--spring.h2.console.enabled=true"
         );
     }
@@ -23,6 +23,11 @@ public class SqlConnection {
         return new EmbeddedDatabaseBuilder()
                 .setType(EmbeddedDatabaseType.H2)
                 .addScript("./CREATE.sql")
+                .addScript("./STUDENT.sql")
+                .addScript("./PAYMENTTYPE.sql")
+                .addScript("./PAYMENT.sql")
+                .addScript("./SUBJECT.sql")
+                .addScript("./MARK.sql")
                 .build();
     }
 

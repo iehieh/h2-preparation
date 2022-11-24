@@ -15,7 +15,7 @@ java -jar sql-task-helper-2.0.0.jar --lesson=7
 
 The `--lesson=<number>` argument is used to determine a lesson number.
 
-After a start you information about connection to H2 console will be available in console
+After a start information about connection to H2 console will be available in a console
 if there are no issues.
 
 ```

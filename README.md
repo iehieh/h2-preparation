@@ -1,4 +1,4 @@
-This project helps to test your SQL statement for the task
+This project helps to test your SQL statements for the task
 [Task #1. SQL](https://github.com/mjc-school/stage2-module3-SQL-tasks).
 
 To make an executable jar.
@@ -25,3 +25,8 @@ if there are no issues.
 2022-11-24 14:43:36.269  INFO 55398 --- [           main] com.mjc.stage2.DbInformationPrinter      : User Name: sa
 2022-11-24 14:43:36.270  INFO 55398 --- [           main] com.mjc.stage2.DbInformationPrinter      : Password:
 ```
+
+Notes:
+
+1. For the 12th task the `TABLES_CHANGES.sql` file must be located in the directory where the `java` command is invoked.
+2. SQL scripts are loaded from a GitHub repository for the task during each initialization.

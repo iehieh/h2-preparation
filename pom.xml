@@ -12,26 +12,11 @@
     </parent>
 
     <groupId>com.mjc.stage2</groupId>
-    <artifactId>module2-sql-task</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>sql-task-helper</artifactId>
+    <packaging>jar</packaging>
+    <version>2.0.0</version>
 
-    <modules>
-        <module>lesson1</module>
-        <module>lesson2</module>
-        <module>lesson4</module>
-        <module>lesson5</module>
-        <module>lesson6</module>
-        <module>lesson7</module>
-        <module>lesson8</module>
-        <module>lesson9</module>
-        <module>lesson10</module>
-        <module>lesson11</module>
-        <module>lesson12</module>
-        <module>lesson3</module>
-    </modules>
-
-    <name>module2-sql-task</name>
+    <name>module2-sql-task-helper</name>
     <url>http://www.mjc.com</url>
 
     <properties>
